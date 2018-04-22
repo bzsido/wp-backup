@@ -2,11 +2,11 @@
 # written by Balazs in 2018
 
 # predefined variables
-LOCATION="/mnt/work/test-backup"
+LOCATION="/backup"
 SEP="/"
-LOGDIR="/mnt/work/logs/"
-LOGFILE=$LOGDIR"wp-backup.log"
-CRED="/home/bzsido/scripts/wp-backup/cred"
+LOGDIR="/backup-logs"
+LOGFILE=$LOGDIR"wp.log"
+CRED="/cred"
 DATE=$(date +%F-%H-%M)
 
 # Make sure that directories exist
