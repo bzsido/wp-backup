@@ -24,9 +24,7 @@ fi
 # collecting all credentials from credential files and starting the backup
 
 if cd $CRED; then
-    CREDFILES=$(ls -l | tail -n +2 | cut --delimiter=' ' --fields=9)
-
-    for CREDFILE in $CREDFILES; do
+    for CREDFILE in *; do
         while read -r SITENAME FTPUSER FTPADDR DOCROOT DBADDR DBUSER DBNAME DBPWD; do
             echo "sitename: $SITENAME"
 
