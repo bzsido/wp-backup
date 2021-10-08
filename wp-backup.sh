@@ -29,7 +29,7 @@ if cd $CRED; then
             echo "sitename: $SITENAME"
 
             # Database dump
-            if mysqldump -h $DBADDR -u $DBUSER -p$DBPWD $DBNAME > $LOCATION$SEP$SITENAME-db-$DATE.sql; then
+            if mysqldump --no-tablespaces -h $DBADDR -u $DBUSER -p$DBPWD $DBNAME > $LOCATION$SEP$SITENAME-db-$DATE.sql; then
                 echo "mysqldump successful for $SITENAME"
                 else
                     echo "$DATE mysqldump for $SITENAME $DBNAME was unsuccessful" >> $LOGFILE
